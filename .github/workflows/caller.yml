@@ -8,3 +8,12 @@ on:
 jobs:
   call:
     uses: strickland-propane/arlen-mall/.github/workflows/reusable.yml@main
+
+  call-inherit:
+    uses: strickland-propane/arlen-mall/.github/workflows/reusable.yml@main
+    secrets: inherit
+
+  call-set:
+    uses: strickland-propane/arlen-mall/.github/workflows/reusable.yml@main
+    secrets:
+      SHARED_SECRET: "set-secret-from-branson"
