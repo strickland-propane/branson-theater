@@ -1,0 +1,13 @@
+# Demo file call reusable workflow
+
+name: Call reusable
+
+on:
+  workflow_dispatch:
+
+jobs:
+  call:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: strickland-propane/arlen-mall/.github/workflows/reusable.yml@main
