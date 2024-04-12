@@ -12,3 +12,13 @@ jobs:
   call-inherit:
     uses: strickland-propane/arlen-mall/.github/workflows/reusable.yml@main
     secrets: inherit
+
+  call-set:
+    uses: strickland-propane/arlen-mall/.github/workflows/reusable-2.yml@main
+    secrets:
+      arlen_secret: "custom-secret"
+
+  call-set-inherit:
+    uses: strickland-propane/arlen-mall/.github/workflows/reusable-2.yml@main
+    secrets:
+      arlen_secret: ${{ secrets.arlen_secret }}
